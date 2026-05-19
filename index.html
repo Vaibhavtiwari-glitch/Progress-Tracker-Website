@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Tracking Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Background overlay for grid and dots -->
+    <div class="bg-overlay"></div>
+
+    <div class="dashboard-container">
+        <!-- Header & Streak Widget -->
+        <header class="dashboard-header">
+            <div class="header-titles">
+                <h1>Progress Tracking Dashboard</h1>
+                <p class="subtitle">Track your consistency and achieve your goals.</p>
+            </div>
+            <div class="header-widgets">
+                <section class="glass-panel progress-widget">
+                    <span class="progress-widget-title">Overall Progress</span>
+                    <div class="progress-bar-row">
+                        <div class="progress-bar-container progress-widget-bar">
+                            <div class="progress-bar" id="progress-bar" style="width: 0%;"></div>
+                        </div>
+                        <span class="progress-widget-label" id="progress-percentage">0%</span>
+                    </div>
+                </section>
+                <div class="glass-panel streak-widget">
+                    <span class="streak-label">Daily Streak</span>
+                    <div class="streak-value-container">
+                        <span class="streak-icon">🔥</span>
+                        <span class="streak-count" id="streak-counter">0</span>
+                    </div>
+                </div>
+                <button id="reset-progress-btn" class="reset-btn glass-panel">Reset All Progress</button>
+            </div>
+        </header>
+
+        <main class="dashboard-grid">
+
+            <!-- Task Adder & List -->
+            <section class="glass-panel card tasks-section">
+                <h2>Daily Tasks</h2>
+                <div class="task-adder">
+                    <input type="text" id="new-task-input" placeholder="Add a new task...">
+                    <button id="add-task-btn" aria-label="Add Task">+</button>
+                </div>
+                <div class="task-list-container">
+                    <ul class="task-list" id="task-list">
+                        <li class="task-item">
+                            <div class="task-content">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                    <span class="task-text">Read 15 pages of UI/UX book</span>
+                                </label>
+                            </div>
+                            <button class="delete-task-btn" aria-label="Delete Task">✕</button>
+                        </li>
+                        <li class="task-item">
+                            <div class="task-content">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <span class="task-text">Design the dashboard mockup</span>
+                                </label>
+                            </div>
+                            <button class="delete-task-btn" aria-label="Delete Task">✕</button>
+                        </li>
+                        <li class="task-item">
+                            <div class="task-content">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <span class="task-text">Workout for 45 minutes</span>
+                                </label>
+                            </div>
+                            <button class="delete-task-btn" aria-label="Delete Task">✕</button>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Connector to orb -->
+                <div class="connector connector-right"></div>
+            </section>
+
+            <!-- Main Goal Orb Section -->
+            <div class="orb-container">
+                <div class="orb">
+                    <span class="orb-text">RRB NTPC</span>
+                </div>
+            </div>
+
+            <!-- Contribution Calendar -->
+            <section class="glass-panel card calendar-section">
+                <h2>Activity Calendar</h2>
+                <div class="calendar-wrapper">
+                    <div class="calendar-grid" id="contribution-calendar">
+                        <!-- A 10x5 grid of squares (50 days) -->
+                        <div class="calendar-square"></div>
+                        <div class="calendar-square level-1"></div>
+                        <div class="calendar-square level-2"></div>
+                        <div class="calendar-square"></div>
+                        <div class="calendar-square level-4"></div>
+                        <div class="calendar-square"></div>
+                        <div class="calendar-square"></div>
+                        <div class="calendar-square level-3"></div>
+                        <div class="calendar-square"></div>
+                        <div class="calendar-square level-1"></div>
+
+                        <div class="calendar-square"></div>
+                        <div class="calendar-square level-2"></div>
+                        <div class="calendar-square"></div>
+                        <div class="calendar-square level-4"></div>
+                        <div class="calendar-square level-3"></div>
+                        <div class="calendar-square"></div>
+                        <div class="calendar-square level-1"></div>
+                        <div class="calendar-square"></div>
+                        <div class="calendar-square"></div>
+                        <div class="calendar-square level-2"></div>
+
+                        <div class="calendar-square level-4"></div>
+                        <div class="calendar-square"></div>
+                        <div class="calendar-square level-1"></div>
+                        <div class="calendar-square"></div>
+                        <div class="calendar-square level-2"></div>
+                        <div class="calendar-square"></div>
+                        <div class="calendar-square level-3"></div>
+                        <div class="calendar-square level-4"></div>
+                        <div class="calendar-square"></div>
+                        <div class="calendar-square"></div>
+
+                        <div class="calendar-square"></div>
+                        <div class="calendar-square level-3"></div>
+                        <div class="calendar-square"></div>
+                        <div class="calendar-square level-1"></div>
+                        <div class="calendar-square"></div>
+                        <div class="calendar-square level-2"></div>
+                        <div class="calendar-square"></div>
+                        <div class="calendar-square"></div>
+                        <div class="calendar-square level-4"></div>
+                        <div class="calendar-square"></div>
+
+                        <div class="calendar-square level-2"></div>
+                        <div class="calendar-square"></div>
+                        <div class="calendar-square level-4"></div>
+                        <div class="calendar-square level-1"></div>
+                        <div class="calendar-square"></div>
+                        <div class="calendar-square"></div>
+                        <div class="calendar-square level-3"></div>
+                        <div class="calendar-square"></div>
+                        <div class="calendar-square level-2"></div>
+                        <div class="calendar-square"></div>
+                    </div>
+                </div>
+                <!-- Connector to orb -->
+                <div class="connector connector-left"></div>
+            </section>
+
+            <!-- Weekly Comparison -->
+            <section class="glass-panel card comparison-section">
+                <h2>Weekly Trends</h2>
+                <div class="comparison-widget" id="weekly-comparison">
+                    <div class="trend-stat">
+                        <span class="trend-label">This Week</span>
+                        <span class="trend-value highlight" id="this-week-tasks">0 Tasks</span>
+                    </div>
+                    <div class="trend-stat">
+                        <span class="trend-label">Last Week</span>
+                        <span class="trend-value" id="last-week-tasks">0 Tasks</span>
+                    </div>
+                    <div class="trend-indicator positive">
+                        <span id="trend-change">No data yet</span>
+                    </div>
+                </div>
+                <!-- Connector to orb -->
+                <div class="connector connector-top"></div>
+            </section>
+        </main>
+    </div>
+    
+    <!-- Reset Confirmation Modal -->
+    <div id="reset-modal" class="modal-overlay">
+        <div class="modal-box glass-panel">
+            <p>Do you want to clear all your previous records?</p>
+            <div class="modal-actions">
+                <button id="modal-cancel-btn" class="modal-btn cancel-btn">Cancel</button>
+                <button id="modal-clear-btn" class="modal-btn clear-btn">Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
